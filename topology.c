@@ -76,7 +76,7 @@ void display_topology(struct cpudata *head)
 
 	cpu = head;
 	for (i = 0; i < nrCPUs; i++) {
-		sockets[cpu->phys_proc_id]++;
+		sockets[cpu->cpu_core_id]++;
 		cpu = cpu->next;
 	}
 
